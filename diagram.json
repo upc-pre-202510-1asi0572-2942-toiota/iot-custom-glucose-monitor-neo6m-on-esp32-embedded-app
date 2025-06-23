@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "author": "Sergio Joel Pecan Pariona",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 57.6,
+      "left": -23.96,
+      "attrs": { "env": "micropython-20231227-v1.22.0" }
+    },
+    { "type": "chip-diabetes", "id": "chip1", "top": 39.42, "left": -252.59, "attrs": {} },
+    {
+      "type": "wokwi-serial-monitor",
+      "id": "serialMonitor",
+      "top": 0,
+      "left": 0,
+      "attrs": { "displayMode": "plotter" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "chip1:OUT", "esp:33", "blue", [ "h67.2", "v86.4" ] ],
+    [ "chip1:A0", "esp:32", "green", [ "h0" ] ],
+    [ "esp:3V3", "chip1:VCC", "red", [ "h0" ] ],
+    [ "chip1:GND", "esp:GND.1", "black", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}

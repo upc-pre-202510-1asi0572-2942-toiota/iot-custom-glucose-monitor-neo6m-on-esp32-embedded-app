@@ -1,0 +1,33 @@
+{
+  "name": "diabetes",
+  "author": "Sergio Joel Pecan Pariona",
+  "pins": [
+    "",
+    "",
+    "",
+    "",
+    "VCC",
+    "OUT",
+    "A0",
+    "GND"
+  ],
+  "controls": [
+    {
+    "id": "glucose",
+    "type": "range",
+      "min": 50,
+      "max": 300,
+      "label": "Glucosa (mg/dL)",
+        "step": 1
+    },
+    {
+      "id": "temp",
+      "type": "range",
+      "min": 30,
+      "max": 45,
+      "initial": 36.5,
+      "step": 1,
+      "label": "Temperatura (°C)"
+    }
+  ]
+}
